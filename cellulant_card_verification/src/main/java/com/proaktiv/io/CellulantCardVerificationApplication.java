@@ -31,5 +31,5 @@ public class CellulantCardVerificationApplication implements CommandLineRunner{
 		cardService.verifyScratchCardsFromFile(file);
 	}
 
-	private static final String SCRATCH_CARDS_FILE = "./src/main/resources/Card_Numbers.csv";
+	private static final String SCRATCH_CARDS_FILE = "./src/main/resources/card_numbers.csv";
 }

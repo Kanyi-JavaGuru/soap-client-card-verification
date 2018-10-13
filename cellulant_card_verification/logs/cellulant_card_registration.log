@@ -900,3 +900,244 @@ INFO  - 2018-10-13 18:20:10 - Unregistering JMX-exposed beans
 INFO  - 2018-10-13 18:20:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
 INFO  - 2018-10-13 18:20:10 - HikariPool-1 - Shutdown initiated...
 INFO  - 2018-10-13 18:20:10 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-13 19:00:08 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 20578 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-13 19:00:08 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-13 19:00:08 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7dfb0c0f: startup date [Sat Oct 13 19:00:08 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:00:09 - HikariPool-1 - Starting...
+INFO  - 2018-10-13 19:00:09 - HikariPool-1 - Start completed.
+INFO  - 2018-10-13 19:00:09 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:00:09 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-13 19:00:10 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-13 19:00:10 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-13 19:00:10 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-13 19:00:10 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-13 19:00:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:00:10 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-13 19:00:10 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-13 19:00:11 - Started CellulantCardVerificationApplicationTests in 2.728 seconds (JVM running for 3.312)
+INFO  - 2018-10-13 19:00:11 - raw: 1001
+INFO  - 2018-10-13 19:00:11 - raw: 4909
+INFO  - 2018-10-13 19:00:11 - raw: 424
+INFO  - 2018-10-13 19:00:11 - raw: 3726
+INFO  - 2018-10-13 19:00:11 - bic: 10010424
+INFO  - 2018-10-13 19:00:11 - bank details: Aareal Bank
+INFO  - 2018-10-13 19:00:11 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-13 19:00:12 - raw: 1002
+INFO  - 2018-10-13 19:00:12 - raw: 5097
+INFO  - 2018-10-13 19:00:12 - raw: 500
+INFO  - 2018-10-13 19:00:12 - raw: 4513
+INFO  - 2018-10-13 19:00:12 - bic: 10020500
+INFO  - 2018-10-13 19:00:12 - bank details: Sozialbank
+INFO  - 2018-10-13 19:00:12 - raw: 1002
+INFO  - 2018-10-13 19:00:12 - raw: 3787
+INFO  - 2018-10-13 19:00:12 - raw: 890
+INFO  - 2018-10-13 19:00:12 - raw: 4513
+INFO  - 2018-10-13 19:00:12 - bic: 10020890
+INFO  - 2018-10-13 19:00:12 - bank details: Bayer Hypo- und Vereinsbank
+INFO  - 2018-10-13 19:00:12 - raw: 1003
+INFO  - 2018-10-13 19:00:12 - raw: 8026
+INFO  - 2018-10-13 19:00:12 - raw: 400
+INFO  - 2018-10-13 19:00:12 - raw: 1003
+INFO  - 2018-10-13 19:00:12 - raw: 8567
+INFO  - 2018-10-13 19:00:12 - raw: 600
+INFO  - 2018-10-13 19:00:12 - raw: 5530
+INFO  - 2018-10-13 19:00:12 - bic: 10030600
+INFO  - 2018-10-13 19:00:12 - bank details: Bankhaus Kruber
+INFO  - 2018-10-13 19:00:12 - raw: 1003
+INFO  - 2018-10-13 19:00:12 - raw: 2175
+INFO  - 2018-10-13 19:00:12 - raw: 700
+INFO  - 2018-10-13 19:00:12 - raw: 4094
+INFO  - 2018-10-13 19:00:12 - bic: 10030700
+INFO  - 2018-10-13 19:00:13 - bank details: Gries & Heissel - Bankiers
+INFO  - 2018-10-13 19:00:13 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7dfb0c0f: startup date [Sat Oct 13 19:00:08 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:00:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:00:13 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-13 19:00:13 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-13 19:10:22 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 21258 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-13 19:10:22 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-13 19:10:22 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:10:22 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:10:23 - HikariPool-1 - Starting...
+INFO  - 2018-10-13 19:10:23 - HikariPool-1 - Start completed.
+INFO  - 2018-10-13 19:10:23 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:10:23 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-13 19:10:23 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-13 19:10:23 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-13 19:10:23 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-13 19:10:23 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-13 19:10:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:10:24 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-13 19:10:24 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-13 19:10:24 - Started CellulantCardVerificationApplicationTests in 2.807 seconds (JVM running for 3.443)
+INFO  - 2018-10-13 19:10:24 - raw: 1001
+INFO  - 2018-10-13 19:10:24 - raw: 4909
+INFO  - 2018-10-13 19:10:24 - raw: 424
+INFO  - 2018-10-13 19:10:24 - raw: 3726
+INFO  - 2018-10-13 19:10:24 - bic: 10010424
+INFO  - 2018-10-13 19:10:36 - bank details: Aareal Bank
+INFO  - 2018-10-13 19:10:36 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-13 19:10:36 - raw: 1002
+INFO  - 2018-10-13 19:10:36 - raw: 5097
+INFO  - 2018-10-13 19:10:36 - raw: 500
+INFO  - 2018-10-13 19:10:36 - raw: 4513
+INFO  - 2018-10-13 19:10:36 - bic: 10020500
+INFO  - 2018-10-13 19:10:37 - bank details: Sozialbank
+INFO  - 2018-10-13 19:10:37 - raw: 1002
+INFO  - 2018-10-13 19:10:37 - raw: 3787
+INFO  - 2018-10-13 19:10:37 - raw: 890
+INFO  - 2018-10-13 19:10:37 - raw: 4513
+INFO  - 2018-10-13 19:10:37 - bic: 10020890
+INFO  - 2018-10-13 19:10:38 - bank details: Bayer Hypo- und Vereinsbank
+INFO  - 2018-10-13 19:10:38 - raw: 1003
+INFO  - 2018-10-13 19:10:38 - raw: 8026
+INFO  - 2018-10-13 19:10:38 - raw: 400
+INFO  - 2018-10-13 19:10:38 - raw: 1003
+INFO  - 2018-10-13 19:10:38 - raw: 8567
+INFO  - 2018-10-13 19:10:38 - raw: 600
+INFO  - 2018-10-13 19:10:38 - raw: 5530
+INFO  - 2018-10-13 19:10:38 - bic: 10030600
+INFO  - 2018-10-13 19:10:38 - bank details: Bankhaus Kruber
+INFO  - 2018-10-13 19:10:38 - raw: 1003
+INFO  - 2018-10-13 19:10:38 - raw: 2175
+INFO  - 2018-10-13 19:10:38 - raw: 700
+INFO  - 2018-10-13 19:10:38 - raw: 4094
+INFO  - 2018-10-13 19:10:38 - bic: 10030700
+INFO  - 2018-10-13 19:10:38 - bank details: Gries & Heissel - Bankiers
+INFO  - 2018-10-13 19:10:39 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:10:22 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:10:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:10:39 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-13 19:10:39 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-13 19:17:01 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 21763 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-13 19:17:01 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-13 19:17:01 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:17:01 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:17:02 - HikariPool-1 - Starting...
+INFO  - 2018-10-13 19:17:02 - HikariPool-1 - Start completed.
+INFO  - 2018-10-13 19:17:02 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:17:02 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-13 19:17:02 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-13 19:17:02 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-13 19:17:02 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-13 19:17:03 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-13 19:17:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:17:03 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-13 19:17:03 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-13 19:17:04 - Started CellulantCardVerificationApplicationTests in 2.706 seconds (JVM running for 3.291)
+INFO  - 2018-10-13 19:17:04 - raw: 1001
+INFO  - 2018-10-13 19:17:04 - raw: 4909
+INFO  - 2018-10-13 19:17:04 - raw: 424
+INFO  - 2018-10-13 19:17:04 - raw: 3726
+INFO  - 2018-10-13 19:17:04 - bic: 10010424
+INFO  - 2018-10-13 19:17:04 - bank details: Aareal Bank
+INFO  - 2018-10-13 19:17:04 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-13 19:17:05 - raw: 1002
+INFO  - 2018-10-13 19:17:05 - raw: 5097
+INFO  - 2018-10-13 19:17:05 - raw: 500
+INFO  - 2018-10-13 19:17:05 - raw: 4513
+INFO  - 2018-10-13 19:17:05 - bic: 10020500
+INFO  - 2018-10-13 19:17:06 - bank details: Sozialbank
+INFO  - 2018-10-13 19:17:06 - raw: 1002
+INFO  - 2018-10-13 19:17:06 - raw: 3787
+INFO  - 2018-10-13 19:17:06 - raw: 890
+INFO  - 2018-10-13 19:17:06 - raw: 4513
+INFO  - 2018-10-13 19:17:06 - bic: 10020890
+INFO  - 2018-10-13 19:17:06 - bank details: Bayer Hypo- und Vereinsbank
+INFO  - 2018-10-13 19:17:06 - raw: 1003
+INFO  - 2018-10-13 19:17:06 - raw: 8026
+INFO  - 2018-10-13 19:17:06 - raw: 400
+INFO  - 2018-10-13 19:17:06 - raw: 1003
+INFO  - 2018-10-13 19:17:06 - raw: 8567
+INFO  - 2018-10-13 19:17:06 - raw: 600
+INFO  - 2018-10-13 19:17:06 - raw: 5530
+INFO  - 2018-10-13 19:17:06 - bic: 10030600
+INFO  - 2018-10-13 19:17:07 - bank details: Bankhaus Kruber
+INFO  - 2018-10-13 19:17:07 - raw: 1003
+INFO  - 2018-10-13 19:17:07 - raw: 2175
+INFO  - 2018-10-13 19:17:07 - raw: 700
+INFO  - 2018-10-13 19:17:07 - raw: 4094
+INFO  - 2018-10-13 19:17:07 - bic: 10030700
+INFO  - 2018-10-13 19:17:07 - bank details: Gries & Heissel - Bankiers
+INFO  - 2018-10-13 19:17:07 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:17:01 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:17:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:17:07 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-13 19:17:07 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-13 19:20:00 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 22007 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-13 19:20:00 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-13 19:20:00 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:20:00 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:20:01 - HikariPool-1 - Starting...
+INFO  - 2018-10-13 19:20:01 - HikariPool-1 - Start completed.
+INFO  - 2018-10-13 19:20:01 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:20:01 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-13 19:20:01 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-13 19:20:01 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-13 19:20:01 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-13 19:20:01 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-13 19:20:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:20:02 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-13 19:20:02 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-13 19:20:02 - Started CellulantCardVerificationApplicationTests in 2.584 seconds (JVM running for 3.183)
+INFO  - 2018-10-13 19:20:02 - raw: 1001
+INFO  - 2018-10-13 19:20:02 - raw: 4909
+INFO  - 2018-10-13 19:20:02 - raw: 424
+INFO  - 2018-10-13 19:20:02 - raw: 3726
+INFO  - 2018-10-13 19:20:02 - bic: 10010424
+INFO  - 2018-10-13 19:20:09 - bank details: Aareal Bank
+INFO  - 2018-10-13 19:20:09 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-13 19:20:09 - raw: 1002
+INFO  - 2018-10-13 19:20:09 - raw: 5097
+INFO  - 2018-10-13 19:20:09 - raw: 500
+INFO  - 2018-10-13 19:20:09 - raw: 4513
+INFO  - 2018-10-13 19:20:09 - bic: 10020500
+INFO  - 2018-10-13 19:20:21 - bank details: Sozialbank
+INFO  - 2018-10-13 19:20:21 - raw: 1002
+INFO  - 2018-10-13 19:20:21 - raw: 3787
+INFO  - 2018-10-13 19:20:21 - raw: 890
+INFO  - 2018-10-13 19:20:21 - raw: 4513
+INFO  - 2018-10-13 19:20:21 - bic: 10020890
+INFO  - 2018-10-13 19:20:24 - bank details: Bayer Hypo- und Vereinsbank
+INFO  - 2018-10-13 19:20:24 - raw: 1003
+INFO  - 2018-10-13 19:20:24 - raw: 8026
+INFO  - 2018-10-13 19:20:24 - raw: 400
+INFO  - 2018-10-13 19:20:24 - raw: 1003
+INFO  - 2018-10-13 19:20:24 - raw: 8567
+INFO  - 2018-10-13 19:20:24 - raw: 600
+INFO  - 2018-10-13 19:20:24 - raw: 5530
+INFO  - 2018-10-13 19:20:24 - bic: 10030600
+INFO  - 2018-10-13 19:20:24 - bank details: Bankhaus Kruber
+INFO  - 2018-10-13 19:20:24 - raw: 1003
+INFO  - 2018-10-13 19:20:24 - raw: 2175
+INFO  - 2018-10-13 19:20:24 - raw: 700
+INFO  - 2018-10-13 19:20:24 - raw: 4094
+INFO  - 2018-10-13 19:20:24 - bic: 10030700
+INFO  - 2018-10-13 19:20:25 - bank details: Gries & Heissel - Bankiers
+INFO  - 2018-10-13 19:20:25 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:20:00 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:20:25 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:20:25 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-13 19:20:25 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-13 19:27:11 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 22296 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-13 19:27:11 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-13 19:27:11 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:27:11 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:27:12 - HikariPool-1 - Starting...
+INFO  - 2018-10-13 19:27:13 - HikariPool-1 - Start completed.
+INFO  - 2018-10-13 19:27:13 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:27:13 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-13 19:27:13 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-13 19:27:13 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-13 19:27:13 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-13 19:27:13 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-13 19:27:13 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:27:13 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-13 19:27:14 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-13 19:27:14 - Started CellulantCardVerificationApplicationTests in 2.881 seconds (JVM running for 3.456)
+INFO  - 2018-10-13 19:27:14 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:27:11 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-13 19:27:14 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-13 19:27:14 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-13 19:27:14 - HikariPool-1 - Shutdown completed.
