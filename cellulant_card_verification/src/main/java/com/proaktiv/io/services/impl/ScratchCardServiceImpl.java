@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +15,6 @@ import com.proaktiv.io.soap.gateways.BankTypeGateway;
 
 @Service
 public class ScratchCardServiceImpl implements ScratchCardService {
-	private static final Logger log = LoggerFactory.getLogger(ScratchCardServiceImpl.class);
 
 	@Autowired
 	private BankTypeGateway gateway;
@@ -56,7 +53,6 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 			final Integer fifthDigitInt = Integer.parseInt(fifthDigit);
 			
 			Integer checkSum = firstFourInt;			
-			log.info("raw: "+checkSum);
 
 			do {				
 				checkSum = convertToOctal(checkSum);	
@@ -108,9 +104,7 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 				if(isValid) {
 					final String[] sets = cardNumber.split("-");
 					final String bic = getBic(sets);
-					log.info("bic: "+bic);
 					final DetailsType bankDetails = retrieveBankDetails(bic);
-					log.info("bank details: "+bankDetails.getBezeichnung());
 					
 					service.save(bankDetails, getCardValue(sets));
 				}					

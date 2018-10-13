@@ -23,9 +23,11 @@ public class BankTypeGateway extends WebServiceGatewaySupport{
 												.marshalSendAndReceive(new ObjectFactory()
 													.createGetBank(request));
 
-		} catch (Exception e) {
+
+			return jaxbElement.getValue();
+		} catch (NullPointerException e) {
 			log.info("Error occured: "+e.getMessage());
 		}
-		return jaxbElement.getValue();
+		return null;
 	}
 }
