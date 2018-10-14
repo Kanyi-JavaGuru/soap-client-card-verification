@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,7 @@ import com.proaktiv.io.soap.gateways.BankTypeGateway;
 
 @Service
 public class ScratchCardServiceImpl implements ScratchCardService {
+	private static final Logger log = LoggerFactory.getLogger(ScratchCardServiceImpl.class);
 
 	@Autowired
 	private BankTypeGateway gateway;
@@ -94,6 +97,8 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 	
 	@Override
 	public void verifyScratchCardsFromFile(final File file) {
+		String[] sets = new String[4];
+		DetailsType bankDetails = new DetailsType();
 		try {
 			final Scanner inputStream = new Scanner(file);
 			inputStream.next();
@@ -102,17 +107,19 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 				final String cardNumber = inputStream.next();
 				final Boolean isValid = verifyScratchCard(cardNumber);
 				if(isValid) {
-					final String[] sets = cardNumber.split("-");
+					sets = cardNumber.split("-");
 					final String bic = getBic(sets);
-					final DetailsType bankDetails = retrieveBankDetails(bic);
-					
-					service.save(bankDetails, getCardValue(sets));
+					bankDetails = retrieveBankDetails(bic);					
 				}					
-			}
-			
+			}			
 			inputStream.close();
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			log.info("FileNotFoundException: "+e.getMessage());
+		} catch (NullPointerException e) {
+			log.info("NullPointerException: "+e.getMessage());
+		} catch (Exception e) {
+			log.info("Exception: "+e.getMessage());
 		} 
+		service.save(bankDetails, getCardValue(sets));
 	}
 }

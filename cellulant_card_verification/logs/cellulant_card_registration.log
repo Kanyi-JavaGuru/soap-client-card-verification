@@ -1,22 +1,19 @@
-INFO  - 2018-10-13 18:04:42 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 18876 (/home/kevin/eclipse-workspace/cellulant_card_verification/target/classes started by kevin in /home/kevin/eclipse-workspace/cellulant_card_verification)
-INFO  - 2018-10-13 18:04:42 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 18:04:42 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1622f1b: startup date [Sat Oct 13 18:04:42 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:04:43 - HikariPool-1 - Starting...
-ERROR - 2018-10-13 18:04:44 - HikariPool-1 - Exception during pool initialization.
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+INFO  - 2018-10-14 10:43:26 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 6295 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 10:43:26 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 10:43:26 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2e4b8173: startup date [Sun Oct 14 10:43:26 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:43:27 - HikariPool-1 - Starting...
+ERROR - 2018-10-14 10:43:28 - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
@@ -44,11 +41,11 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cel
 	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:166)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:111)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d.CGLIB$jpaVendorAdapter$5(<generated>)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d$$FastClassBySpringCGLIB$$e9722d1.invoke(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e$$FastClassBySpringCGLIB$$c64d6876.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d.jpaVendorAdapter(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e.jpaVendorAdapter(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -99,19 +96,31 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cel
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:22)
-WARN  - 2018-10-13 18:04:44 - Unable to determine jdbc url from datasource
-org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:19)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 84 common frames omitted
+WARN  - 2018-10-14 10:43:28 - Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:328)
 	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
 	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:166)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:111)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d.CGLIB$jpaVendorAdapter$5(<generated>)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d$$FastClassBySpringCGLIB$$e9722d1.invoke(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e$$FastClassBySpringCGLIB$$c64d6876.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d.jpaVendorAdapter(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e.jpaVendorAdapter(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -162,25 +171,24 @@ org.springframework.jdbc.support.MetaDataAccessException: Could not get Connecti
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:22)
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:19)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
 	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
 	... 60 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
@@ -204,22 +212,29 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown da
 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
 	... 61 common frames omitted
-INFO  - 2018-10-13 18:04:44 - HikariPool-1 - Starting...
-ERROR - 2018-10-13 18:04:45 - HikariPool-1 - Exception during pool initialization.
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 84 common frames omitted
+INFO  - 2018-10-14 10:43:28 - HikariPool-1 - Starting...
+ERROR - 2018-10-14 10:43:29 - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
@@ -253,11 +268,11 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cel
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.getHibernateProperties(JpaProperties.java:153)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:134)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:136)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d.CGLIB$entityManagerFactory$4(<generated>)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d$$FastClassBySpringCGLIB$$e9722d1.invoke(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e.CGLIB$entityManagerFactory$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e$$FastClassBySpringCGLIB$$c64d6876.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
-	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$ae06f06d.entityManagerFactory(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$eeb5e2e.entityManagerFactory(<generated>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -280,30 +295,37 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cel
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:22)
-INFO  - 2018-10-13 18:04:45 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:04:45 - HHH000204: Processing PersistenceUnitInfo [
+	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:19)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 62 common frames omitted
+INFO  - 2018-10-14 10:43:29 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:43:29 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-INFO  - 2018-10-13 18:04:45 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 18:04:45 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 18:04:45 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 18:04:45 - HikariPool-1 - Starting...
-ERROR - 2018-10-13 18:04:46 - HikariPool-1 - Exception during pool initialization.
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+INFO  - 2018-10-14 10:43:29 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 10:43:29 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 10:43:29 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 10:43:29 - HikariPool-1 - Starting...
+ERROR - 2018-10-14 10:43:30 - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
@@ -360,29 +382,38 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cel
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:22)
-WARN  - 2018-10-13 18:04:46 - HHH000342: Could not obtain connection to query metadata : Unknown database 'cellulant_banks_db'
-INFO  - 2018-10-13 18:04:46 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 18:04:47 - HHH000422: Disabling contextual LOB creation as connection was null
-INFO  - 2018-10-13 18:04:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:04:47 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 18:04:47 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 18:04:47 - HikariPool-1 - Starting...
-ERROR - 2018-10-13 18:04:48 - HikariPool-1 - Exception during pool initialization.
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:19)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 58 common frames omitted
+WARN  - 2018-10-14 10:43:30 - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+INFO  - 2018-10-14 10:43:30 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 10:43:30 - HHH000422: Disabling contextual LOB creation as connection was null
+INFO  - 2018-10-14 10:43:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:43:30 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 10:43:30 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 10:43:30 - HikariPool-1 - Starting...
+ERROR - 2018-10-14 10:43:31 - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
@@ -488,34 +519,36 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cel
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:22)
-INFO  - 2018-10-13 18:04:48 - Registering beans for JMX exposure on startup
-INFO  - 2018-10-13 18:04:48 - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO  - 2018-10-13 18:04:48 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-INFO  - 2018-10-13 18:04:48 - Started CellulantCardVerificationApplication in 6.122 seconds (JVM running for 6.482)
-INFO  - 2018-10-13 18:04:48 - raw: 1001
-INFO  - 2018-10-13 18:04:48 - raw: 4909
-INFO  - 2018-10-13 18:04:48 - raw: 424
-INFO  - 2018-10-13 18:04:48 - raw: 3726
-INFO  - 2018-10-13 18:04:48 - bic: 10010424
-INFO  - 2018-10-13 18:04:52 - bank details: Aareal Bank
-INFO  - 2018-10-13 18:04:52 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 18:04:52 - HikariPool-1 - Starting...
-ERROR - 2018-10-13 18:04:53 - HikariPool-1 - Exception during pool initialization.
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:19)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 107 common frames omitted
+INFO  - 2018-10-14 10:43:32 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 10:43:32 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 10:43:32 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 10:43:32 - Started CellulantCardVerificationApplication in 6.128 seconds (JVM running for 6.48)
+INFO  - 2018-10-14 10:43:34 - Exception: Keine Bank zur BLZ 11030700 gefunden!
+INFO  - 2018-10-14 10:43:34 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-14 10:43:34 - HikariPool-1 - Starting...
+ERROR - 2018-10-14 10:43:35 - HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
@@ -589,29 +622,41 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cel
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy73.findByName(Unknown Source)
 	at com.proaktiv.io.services.impl.BankServiceImpl.save(BankServiceImpl.java:36)
-	at com.proaktiv.io.services.impl.ScratchCardServiceImpl.verifyScratchCardsFromFile(ScratchCardServiceImpl.java:115)
-	at com.proaktiv.io.CellulantCardVerificationApplication.run(CellulantCardVerificationApplication.java:43)
+	at com.proaktiv.io.services.impl.ScratchCardServiceImpl.verifyScratchCardsFromFile(ScratchCardServiceImpl.java:124)
+	at com.proaktiv.io.CellulantCardVerificationApplication.run(CellulantCardVerificationApplication.java:31)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:818)
 	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:802)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:22)
-WARN  - 2018-10-13 18:04:53 - SQL Error: 1049, SQLState: 42000
-ERROR - 2018-10-13 18:04:53 - Unknown database 'cellulant_banks_db'
-INFO  - 2018-10-13 18:04:53 - 
+	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:19)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 82 common frames omitted
+WARN  - 2018-10-14 10:43:35 - SQL Error: 0, SQLState: 08S01
+ERROR - 2018-10-14 10:43:35 - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+INFO  - 2018-10-14 10:43:35 - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-ERROR - 2018-10-13 18:04:53 - Application run failed
+ERROR - 2018-10-14 10:43:36 - Application run failed
 java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:821)
 	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:802)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:341)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
-	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:22)
-Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: Unable to acquire JDBC Connection; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: Unable to acquire JDBC Connection
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:240)
+	at com.proaktiv.io.CellulantCardVerificationApplication.main(CellulantCardVerificationApplication.java:19)
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Unable to acquire JDBC Connection; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:236)
 	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:527)
 	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
@@ -627,12 +672,12 @@ Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: Unab
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy73.findByName(Unknown Source)
 	at com.proaktiv.io.services.impl.BankServiceImpl.save(BankServiceImpl.java:36)
-	at com.proaktiv.io.services.impl.ScratchCardServiceImpl.verifyScratchCardsFromFile(ScratchCardServiceImpl.java:115)
-	at com.proaktiv.io.CellulantCardVerificationApplication.run(CellulantCardVerificationApplication.java:43)
+	at com.proaktiv.io.services.impl.ScratchCardServiceImpl.verifyScratchCardsFromFile(ScratchCardServiceImpl.java:124)
+	at com.proaktiv.io.CellulantCardVerificationApplication.run(CellulantCardVerificationApplication.java:31)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:818)
 	... 5 common frames omitted
-Caused by: org.hibernate.exception.SQLGrammarException: Unable to acquire JDBC Connection
-	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:115)
 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
@@ -679,20 +724,17 @@ Caused by: org.hibernate.exception.SQLGrammarException: Unable to acquire JDBC C
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	... 18 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'cellulant_banks_db'
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
-	at com.mysql.jdbc.Util.getInstance(Util.java:408)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2197)
 	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
 	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
 	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
@@ -716,428 +758,73 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown da
 	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
 	... 59 common frames omitted
-INFO  - 2018-10-13 18:04:53 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1622f1b: startup date [Sat Oct 13 18:04:42 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:04:53 - Unregistering JMX-exposed beans on shutdown
-INFO  - 2018-10-13 18:04:53 - Unregistering JMX-exposed beans
-INFO  - 2018-10-13 18:04:53 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:06:13 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 18935 (/home/kevin/eclipse-workspace/cellulant_card_verification/target/classes started by kevin in /home/kevin/eclipse-workspace/cellulant_card_verification)
-INFO  - 2018-10-13 18:06:13 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 18:06:13 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1139b2f3: startup date [Sat Oct 13 18:06:13 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:06:14 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 18:06:14 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 18:06:14 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:06:14 - HHH000204: Processing PersistenceUnitInfo [
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 82 common frames omitted
+INFO  - 2018-10-14 10:43:36 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@2e4b8173: startup date [Sun Oct 14 10:43:26 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:43:36 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 10:43:36 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 10:43:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:44:20 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 6955 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 10:44:20 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 10:44:20 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e0b85f9: startup date [Sun Oct 14 10:44:20 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:44:20 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 10:44:21 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 10:44:21 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:44:21 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-INFO  - 2018-10-13 18:06:14 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 18:06:14 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 18:06:14 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 18:06:14 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 18:06:14 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:06:14 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 18:06:14 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 18:06:15 - Registering beans for JMX exposure on startup
-INFO  - 2018-10-13 18:06:15 - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO  - 2018-10-13 18:06:15 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-INFO  - 2018-10-13 18:06:15 - Started CellulantCardVerificationApplication in 2.033 seconds (JVM running for 2.359)
-INFO  - 2018-10-13 18:06:15 - raw: 1001
-INFO  - 2018-10-13 18:06:15 - raw: 4909
-INFO  - 2018-10-13 18:06:15 - raw: 424
-INFO  - 2018-10-13 18:06:15 - raw: 3726
-INFO  - 2018-10-13 18:06:15 - bic: 10010424
-INFO  - 2018-10-13 18:06:16 - bank details: Aareal Bank
-INFO  - 2018-10-13 18:06:16 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 18:06:16 - raw: 1002
-INFO  - 2018-10-13 18:06:16 - raw: 5097
-INFO  - 2018-10-13 18:06:16 - raw: 500
-INFO  - 2018-10-13 18:06:16 - raw: 4513
-INFO  - 2018-10-13 18:06:16 - bic: 10020500
-INFO  - 2018-10-13 18:06:17 - bank details: Sozialbank
-INFO  - 2018-10-13 18:06:17 - raw: 1002
-INFO  - 2018-10-13 18:06:17 - raw: 3787
-INFO  - 2018-10-13 18:06:17 - raw: 890
-INFO  - 2018-10-13 18:06:17 - raw: 4513
-INFO  - 2018-10-13 18:06:17 - bic: 10020890
-INFO  - 2018-10-13 18:06:19 - bank details: Bayer Hypo- und Vereinsbank
-INFO  - 2018-10-13 18:06:19 - raw: 1003
-INFO  - 2018-10-13 18:06:19 - raw: 8026
-INFO  - 2018-10-13 18:06:19 - raw: 400
-INFO  - 2018-10-13 18:06:19 - raw: 1003
-INFO  - 2018-10-13 18:06:19 - raw: 8567
-INFO  - 2018-10-13 18:06:19 - raw: 600
-INFO  - 2018-10-13 18:06:19 - raw: 5530
-INFO  - 2018-10-13 18:06:19 - bic: 10030600
-INFO  - 2018-10-13 18:06:19 - bank details: Bankhaus Kruber
-INFO  - 2018-10-13 18:06:19 - raw: 1003
-INFO  - 2018-10-13 18:06:19 - raw: 2175
-INFO  - 2018-10-13 18:06:19 - raw: 700
-INFO  - 2018-10-13 18:06:19 - raw: 4094
-INFO  - 2018-10-13 18:06:19 - bic: 10030700
-INFO  - 2018-10-13 18:06:20 - bank details: Gries & Heissel - Bankiers
-INFO  - 2018-10-13 18:06:20 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1139b2f3: startup date [Sat Oct 13 18:06:13 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:06:20 - Unregistering JMX-exposed beans on shutdown
-INFO  - 2018-10-13 18:06:20 - Unregistering JMX-exposed beans
-INFO  - 2018-10-13 18:06:20 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:06:20 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 18:06:20 - HikariPool-1 - Shutdown completed.
-INFO  - 2018-10-13 18:17:39 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 19205 (/home/kevin/eclipse-workspace/cellulant_card_verification/target/classes started by kevin in /home/kevin/eclipse-workspace/cellulant_card_verification)
-INFO  - 2018-10-13 18:17:39 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 18:17:39 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@31368b99: startup date [Sat Oct 13 18:17:39 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:17:40 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 18:17:40 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 18:17:40 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:17:40 - HHH000204: Processing PersistenceUnitInfo [
+INFO  - 2018-10-14 10:44:21 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 10:44:21 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 10:44:21 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 10:44:21 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 10:44:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:44:21 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 10:44:21 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 10:44:21 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 10:44:21 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 10:44:21 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 10:44:21 - Started CellulantCardVerificationApplication in 1.987 seconds (JVM running for 2.346)
+INFO  - 2018-10-14 10:44:41 - Exception: Keine Bank zur BLZ 11030700 gefunden!
+INFO  - 2018-10-14 10:44:41 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-14 10:44:41 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7e0b85f9: startup date [Sun Oct 14 10:44:20 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:44:41 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 10:44:41 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 10:44:41 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:44:41 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 10:44:41 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 10:48:21 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 7166 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 10:48:21 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 10:48:21 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1700915: startup date [Sun Oct 14 10:48:21 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:48:22 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 10:48:22 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 10:48:22 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:48:22 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-INFO  - 2018-10-13 18:17:40 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 18:17:40 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 18:17:40 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 18:17:40 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 18:17:41 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:17:41 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 18:17:41 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 18:17:41 - Registering beans for JMX exposure on startup
-INFO  - 2018-10-13 18:17:41 - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO  - 2018-10-13 18:17:41 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-INFO  - 2018-10-13 18:17:41 - Started CellulantCardVerificationApplication in 2.022 seconds (JVM running for 2.377)
-INFO  - 2018-10-13 18:17:41 - raw: 1001
-INFO  - 2018-10-13 18:17:41 - raw: 4909
-INFO  - 2018-10-13 18:17:41 - raw: 424
-INFO  - 2018-10-13 18:17:41 - raw: 3726
-INFO  - 2018-10-13 18:17:41 - bic: 10010424
-INFO  - 2018-10-13 18:17:42 - bank details: Aareal Bank
-INFO  - 2018-10-13 18:17:42 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 18:17:42 - raw: 1002
-INFO  - 2018-10-13 18:17:42 - raw: 5097
-INFO  - 2018-10-13 18:17:42 - raw: 500
-INFO  - 2018-10-13 18:17:42 - raw: 4513
-INFO  - 2018-10-13 18:17:42 - bic: 10020500
-INFO  - 2018-10-13 18:17:42 - bank details: Sozialbank
-INFO  - 2018-10-13 18:17:42 - raw: 1002
-INFO  - 2018-10-13 18:17:42 - raw: 3787
-INFO  - 2018-10-13 18:17:42 - raw: 890
-INFO  - 2018-10-13 18:17:42 - raw: 4513
-INFO  - 2018-10-13 18:17:42 - bic: 10020890
-INFO  - 2018-10-13 18:17:43 - bank details: Bayer Hypo- und Vereinsbank
-INFO  - 2018-10-13 18:17:43 - raw: 1003
-INFO  - 2018-10-13 18:17:43 - raw: 8026
-INFO  - 2018-10-13 18:17:43 - raw: 400
-INFO  - 2018-10-13 18:17:43 - raw: 1003
-INFO  - 2018-10-13 18:17:43 - raw: 8567
-INFO  - 2018-10-13 18:17:43 - raw: 600
-INFO  - 2018-10-13 18:17:43 - raw: 5530
-INFO  - 2018-10-13 18:17:43 - bic: 10030600
-INFO  - 2018-10-13 18:17:44 - bank details: Bankhaus Kruber
-INFO  - 2018-10-13 18:17:44 - raw: 1003
-INFO  - 2018-10-13 18:17:44 - raw: 2175
-INFO  - 2018-10-13 18:17:44 - raw: 700
-INFO  - 2018-10-13 18:17:44 - raw: 4094
-INFO  - 2018-10-13 18:17:44 - bic: 10030700
-INFO  - 2018-10-13 18:17:44 - bank details: Gries & Heissel - Bankiers
-INFO  - 2018-10-13 18:17:44 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@31368b99: startup date [Sat Oct 13 18:17:39 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:17:44 - Unregistering JMX-exposed beans on shutdown
-INFO  - 2018-10-13 18:17:44 - Unregistering JMX-exposed beans
-INFO  - 2018-10-13 18:17:44 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:17:44 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 18:17:44 - HikariPool-1 - Shutdown completed.
-INFO  - 2018-10-13 18:19:58 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 19308 (/home/kevin/eclipse-workspace/cellulant_card_verification/target/classes started by kevin in /home/kevin/eclipse-workspace/cellulant_card_verification)
-INFO  - 2018-10-13 18:19:58 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 18:19:58 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@c267ef4: startup date [Sat Oct 13 18:19:58 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:19:59 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 18:19:59 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 18:19:59 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:19:59 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-INFO  - 2018-10-13 18:19:59 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 18:19:59 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 18:19:59 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 18:19:59 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 18:20:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:20:00 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 18:20:00 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 18:20:00 - Registering beans for JMX exposure on startup
-INFO  - 2018-10-13 18:20:00 - Bean with name 'dataSource' has been autodetected for JMX exposure
-INFO  - 2018-10-13 18:20:00 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-INFO  - 2018-10-13 18:20:00 - Started CellulantCardVerificationApplication in 2.032 seconds (JVM running for 2.353)
-INFO  - 2018-10-13 18:20:00 - raw: 1001
-INFO  - 2018-10-13 18:20:00 - raw: 4909
-INFO  - 2018-10-13 18:20:00 - raw: 424
-INFO  - 2018-10-13 18:20:00 - raw: 3726
-INFO  - 2018-10-13 18:20:00 - bic: 10010424
-INFO  - 2018-10-13 18:20:01 - bank details: Aareal Bank
-INFO  - 2018-10-13 18:20:01 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 18:20:01 - raw: 1002
-INFO  - 2018-10-13 18:20:01 - raw: 5097
-INFO  - 2018-10-13 18:20:01 - raw: 500
-INFO  - 2018-10-13 18:20:01 - raw: 4513
-INFO  - 2018-10-13 18:20:01 - bic: 10020500
-INFO  - 2018-10-13 18:20:02 - bank details: Sozialbank
-INFO  - 2018-10-13 18:20:02 - raw: 1002
-INFO  - 2018-10-13 18:20:02 - raw: 3787
-INFO  - 2018-10-13 18:20:02 - raw: 890
-INFO  - 2018-10-13 18:20:02 - raw: 4513
-INFO  - 2018-10-13 18:20:02 - bic: 10020890
-INFO  - 2018-10-13 18:20:02 - bank details: Bayer Hypo- und Vereinsbank
-INFO  - 2018-10-13 18:20:02 - raw: 1003
-INFO  - 2018-10-13 18:20:02 - raw: 8026
-INFO  - 2018-10-13 18:20:02 - raw: 400
-INFO  - 2018-10-13 18:20:02 - raw: 1003
-INFO  - 2018-10-13 18:20:02 - raw: 8567
-INFO  - 2018-10-13 18:20:02 - raw: 600
-INFO  - 2018-10-13 18:20:02 - raw: 5530
-INFO  - 2018-10-13 18:20:02 - bic: 10030600
-INFO  - 2018-10-13 18:20:04 - bank details: Bankhaus Kruber
-INFO  - 2018-10-13 18:20:04 - raw: 1003
-INFO  - 2018-10-13 18:20:04 - raw: 2175
-INFO  - 2018-10-13 18:20:04 - raw: 700
-INFO  - 2018-10-13 18:20:04 - raw: 4094
-INFO  - 2018-10-13 18:20:04 - bic: 10030700
-INFO  - 2018-10-13 18:20:10 - bank details: Gries & Heissel - Bankiers
-INFO  - 2018-10-13 18:20:10 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@c267ef4: startup date [Sat Oct 13 18:19:58 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 18:20:10 - Unregistering JMX-exposed beans on shutdown
-INFO  - 2018-10-13 18:20:10 - Unregistering JMX-exposed beans
-INFO  - 2018-10-13 18:20:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 18:20:10 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 18:20:10 - HikariPool-1 - Shutdown completed.
-INFO  - 2018-10-13 19:00:08 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 20578 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
-INFO  - 2018-10-13 19:00:08 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 19:00:08 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7dfb0c0f: startup date [Sat Oct 13 19:00:08 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:00:09 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 19:00:09 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 19:00:09 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:00:09 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-INFO  - 2018-10-13 19:00:10 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 19:00:10 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 19:00:10 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 19:00:10 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 19:00:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:00:10 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 19:00:10 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 19:00:11 - Started CellulantCardVerificationApplicationTests in 2.728 seconds (JVM running for 3.312)
-INFO  - 2018-10-13 19:00:11 - raw: 1001
-INFO  - 2018-10-13 19:00:11 - raw: 4909
-INFO  - 2018-10-13 19:00:11 - raw: 424
-INFO  - 2018-10-13 19:00:11 - raw: 3726
-INFO  - 2018-10-13 19:00:11 - bic: 10010424
-INFO  - 2018-10-13 19:00:11 - bank details: Aareal Bank
-INFO  - 2018-10-13 19:00:11 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 19:00:12 - raw: 1002
-INFO  - 2018-10-13 19:00:12 - raw: 5097
-INFO  - 2018-10-13 19:00:12 - raw: 500
-INFO  - 2018-10-13 19:00:12 - raw: 4513
-INFO  - 2018-10-13 19:00:12 - bic: 10020500
-INFO  - 2018-10-13 19:00:12 - bank details: Sozialbank
-INFO  - 2018-10-13 19:00:12 - raw: 1002
-INFO  - 2018-10-13 19:00:12 - raw: 3787
-INFO  - 2018-10-13 19:00:12 - raw: 890
-INFO  - 2018-10-13 19:00:12 - raw: 4513
-INFO  - 2018-10-13 19:00:12 - bic: 10020890
-INFO  - 2018-10-13 19:00:12 - bank details: Bayer Hypo- und Vereinsbank
-INFO  - 2018-10-13 19:00:12 - raw: 1003
-INFO  - 2018-10-13 19:00:12 - raw: 8026
-INFO  - 2018-10-13 19:00:12 - raw: 400
-INFO  - 2018-10-13 19:00:12 - raw: 1003
-INFO  - 2018-10-13 19:00:12 - raw: 8567
-INFO  - 2018-10-13 19:00:12 - raw: 600
-INFO  - 2018-10-13 19:00:12 - raw: 5530
-INFO  - 2018-10-13 19:00:12 - bic: 10030600
-INFO  - 2018-10-13 19:00:12 - bank details: Bankhaus Kruber
-INFO  - 2018-10-13 19:00:12 - raw: 1003
-INFO  - 2018-10-13 19:00:12 - raw: 2175
-INFO  - 2018-10-13 19:00:12 - raw: 700
-INFO  - 2018-10-13 19:00:12 - raw: 4094
-INFO  - 2018-10-13 19:00:12 - bic: 10030700
-INFO  - 2018-10-13 19:00:13 - bank details: Gries & Heissel - Bankiers
-INFO  - 2018-10-13 19:00:13 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7dfb0c0f: startup date [Sat Oct 13 19:00:08 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:00:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:00:13 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 19:00:13 - HikariPool-1 - Shutdown completed.
-INFO  - 2018-10-13 19:10:22 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 21258 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
-INFO  - 2018-10-13 19:10:22 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 19:10:22 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:10:22 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:10:23 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 19:10:23 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 19:10:23 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:10:23 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-INFO  - 2018-10-13 19:10:23 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 19:10:23 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 19:10:23 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 19:10:23 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 19:10:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:10:24 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 19:10:24 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 19:10:24 - Started CellulantCardVerificationApplicationTests in 2.807 seconds (JVM running for 3.443)
-INFO  - 2018-10-13 19:10:24 - raw: 1001
-INFO  - 2018-10-13 19:10:24 - raw: 4909
-INFO  - 2018-10-13 19:10:24 - raw: 424
-INFO  - 2018-10-13 19:10:24 - raw: 3726
-INFO  - 2018-10-13 19:10:24 - bic: 10010424
-INFO  - 2018-10-13 19:10:36 - bank details: Aareal Bank
-INFO  - 2018-10-13 19:10:36 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 19:10:36 - raw: 1002
-INFO  - 2018-10-13 19:10:36 - raw: 5097
-INFO  - 2018-10-13 19:10:36 - raw: 500
-INFO  - 2018-10-13 19:10:36 - raw: 4513
-INFO  - 2018-10-13 19:10:36 - bic: 10020500
-INFO  - 2018-10-13 19:10:37 - bank details: Sozialbank
-INFO  - 2018-10-13 19:10:37 - raw: 1002
-INFO  - 2018-10-13 19:10:37 - raw: 3787
-INFO  - 2018-10-13 19:10:37 - raw: 890
-INFO  - 2018-10-13 19:10:37 - raw: 4513
-INFO  - 2018-10-13 19:10:37 - bic: 10020890
-INFO  - 2018-10-13 19:10:38 - bank details: Bayer Hypo- und Vereinsbank
-INFO  - 2018-10-13 19:10:38 - raw: 1003
-INFO  - 2018-10-13 19:10:38 - raw: 8026
-INFO  - 2018-10-13 19:10:38 - raw: 400
-INFO  - 2018-10-13 19:10:38 - raw: 1003
-INFO  - 2018-10-13 19:10:38 - raw: 8567
-INFO  - 2018-10-13 19:10:38 - raw: 600
-INFO  - 2018-10-13 19:10:38 - raw: 5530
-INFO  - 2018-10-13 19:10:38 - bic: 10030600
-INFO  - 2018-10-13 19:10:38 - bank details: Bankhaus Kruber
-INFO  - 2018-10-13 19:10:38 - raw: 1003
-INFO  - 2018-10-13 19:10:38 - raw: 2175
-INFO  - 2018-10-13 19:10:38 - raw: 700
-INFO  - 2018-10-13 19:10:38 - raw: 4094
-INFO  - 2018-10-13 19:10:38 - bic: 10030700
-INFO  - 2018-10-13 19:10:38 - bank details: Gries & Heissel - Bankiers
-INFO  - 2018-10-13 19:10:39 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:10:22 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:10:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:10:39 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 19:10:39 - HikariPool-1 - Shutdown completed.
-INFO  - 2018-10-13 19:17:01 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 21763 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
-INFO  - 2018-10-13 19:17:01 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 19:17:01 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:17:01 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:17:02 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 19:17:02 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 19:17:02 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:17:02 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-INFO  - 2018-10-13 19:17:02 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 19:17:02 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 19:17:02 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 19:17:03 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 19:17:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:17:03 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 19:17:03 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 19:17:04 - Started CellulantCardVerificationApplicationTests in 2.706 seconds (JVM running for 3.291)
-INFO  - 2018-10-13 19:17:04 - raw: 1001
-INFO  - 2018-10-13 19:17:04 - raw: 4909
-INFO  - 2018-10-13 19:17:04 - raw: 424
-INFO  - 2018-10-13 19:17:04 - raw: 3726
-INFO  - 2018-10-13 19:17:04 - bic: 10010424
-INFO  - 2018-10-13 19:17:04 - bank details: Aareal Bank
-INFO  - 2018-10-13 19:17:04 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 19:17:05 - raw: 1002
-INFO  - 2018-10-13 19:17:05 - raw: 5097
-INFO  - 2018-10-13 19:17:05 - raw: 500
-INFO  - 2018-10-13 19:17:05 - raw: 4513
-INFO  - 2018-10-13 19:17:05 - bic: 10020500
-INFO  - 2018-10-13 19:17:06 - bank details: Sozialbank
-INFO  - 2018-10-13 19:17:06 - raw: 1002
-INFO  - 2018-10-13 19:17:06 - raw: 3787
-INFO  - 2018-10-13 19:17:06 - raw: 890
-INFO  - 2018-10-13 19:17:06 - raw: 4513
-INFO  - 2018-10-13 19:17:06 - bic: 10020890
-INFO  - 2018-10-13 19:17:06 - bank details: Bayer Hypo- und Vereinsbank
-INFO  - 2018-10-13 19:17:06 - raw: 1003
-INFO  - 2018-10-13 19:17:06 - raw: 8026
-INFO  - 2018-10-13 19:17:06 - raw: 400
-INFO  - 2018-10-13 19:17:06 - raw: 1003
-INFO  - 2018-10-13 19:17:06 - raw: 8567
-INFO  - 2018-10-13 19:17:06 - raw: 600
-INFO  - 2018-10-13 19:17:06 - raw: 5530
-INFO  - 2018-10-13 19:17:06 - bic: 10030600
-INFO  - 2018-10-13 19:17:07 - bank details: Bankhaus Kruber
-INFO  - 2018-10-13 19:17:07 - raw: 1003
-INFO  - 2018-10-13 19:17:07 - raw: 2175
-INFO  - 2018-10-13 19:17:07 - raw: 700
-INFO  - 2018-10-13 19:17:07 - raw: 4094
-INFO  - 2018-10-13 19:17:07 - bic: 10030700
-INFO  - 2018-10-13 19:17:07 - bank details: Gries & Heissel - Bankiers
-INFO  - 2018-10-13 19:17:07 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:17:01 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:17:07 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:17:07 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 19:17:07 - HikariPool-1 - Shutdown completed.
-INFO  - 2018-10-13 19:20:00 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 22007 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
-INFO  - 2018-10-13 19:20:00 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 19:20:00 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:20:00 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:20:01 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 19:20:01 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 19:20:01 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:20:01 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-INFO  - 2018-10-13 19:20:01 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 19:20:01 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 19:20:01 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 19:20:01 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 19:20:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:20:02 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 19:20:02 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 19:20:02 - Started CellulantCardVerificationApplicationTests in 2.584 seconds (JVM running for 3.183)
-INFO  - 2018-10-13 19:20:02 - raw: 1001
-INFO  - 2018-10-13 19:20:02 - raw: 4909
-INFO  - 2018-10-13 19:20:02 - raw: 424
-INFO  - 2018-10-13 19:20:02 - raw: 3726
-INFO  - 2018-10-13 19:20:02 - bic: 10010424
-INFO  - 2018-10-13 19:20:09 - bank details: Aareal Bank
-INFO  - 2018-10-13 19:20:09 - HHH000397: Using ASTQueryTranslatorFactory
-INFO  - 2018-10-13 19:20:09 - raw: 1002
-INFO  - 2018-10-13 19:20:09 - raw: 5097
-INFO  - 2018-10-13 19:20:09 - raw: 500
-INFO  - 2018-10-13 19:20:09 - raw: 4513
-INFO  - 2018-10-13 19:20:09 - bic: 10020500
-INFO  - 2018-10-13 19:20:21 - bank details: Sozialbank
-INFO  - 2018-10-13 19:20:21 - raw: 1002
-INFO  - 2018-10-13 19:20:21 - raw: 3787
-INFO  - 2018-10-13 19:20:21 - raw: 890
-INFO  - 2018-10-13 19:20:21 - raw: 4513
-INFO  - 2018-10-13 19:20:21 - bic: 10020890
-INFO  - 2018-10-13 19:20:24 - bank details: Bayer Hypo- und Vereinsbank
-INFO  - 2018-10-13 19:20:24 - raw: 1003
-INFO  - 2018-10-13 19:20:24 - raw: 8026
-INFO  - 2018-10-13 19:20:24 - raw: 400
-INFO  - 2018-10-13 19:20:24 - raw: 1003
-INFO  - 2018-10-13 19:20:24 - raw: 8567
-INFO  - 2018-10-13 19:20:24 - raw: 600
-INFO  - 2018-10-13 19:20:24 - raw: 5530
-INFO  - 2018-10-13 19:20:24 - bic: 10030600
-INFO  - 2018-10-13 19:20:24 - bank details: Bankhaus Kruber
-INFO  - 2018-10-13 19:20:24 - raw: 1003
-INFO  - 2018-10-13 19:20:24 - raw: 2175
-INFO  - 2018-10-13 19:20:24 - raw: 700
-INFO  - 2018-10-13 19:20:24 - raw: 4094
-INFO  - 2018-10-13 19:20:24 - bic: 10030700
-INFO  - 2018-10-13 19:20:25 - bank details: Gries & Heissel - Bankiers
-INFO  - 2018-10-13 19:20:25 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6933b6c6: startup date [Sat Oct 13 19:20:00 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:20:25 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:20:25 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 19:20:25 - HikariPool-1 - Shutdown completed.
-INFO  - 2018-10-13 19:27:11 - Starting CellulantCardVerificationApplicationTests on localhost.localdomain with PID 22296 (started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
-INFO  - 2018-10-13 19:27:11 - No active profile set, falling back to default profiles: default
-INFO  - 2018-10-13 19:27:11 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:27:11 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:27:12 - HikariPool-1 - Starting...
-INFO  - 2018-10-13 19:27:13 - HikariPool-1 - Start completed.
-INFO  - 2018-10-13 19:27:13 - Building JPA container EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:27:13 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-INFO  - 2018-10-13 19:27:13 - HHH000412: Hibernate Core {5.2.17.Final}
-INFO  - 2018-10-13 19:27:13 - HHH000206: hibernate.properties not found
-INFO  - 2018-10-13 19:27:13 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  - 2018-10-13 19:27:13 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-INFO  - 2018-10-13 19:27:13 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:27:13 - Creating JAXBContext with context path [com.cellulant.wsdl]
-INFO  - 2018-10-13 19:27:14 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-INFO  - 2018-10-13 19:27:14 - Started CellulantCardVerificationApplicationTests in 2.881 seconds (JVM running for 3.456)
-INFO  - 2018-10-13 19:27:14 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7d3e8655: startup date [Sat Oct 13 19:27:11 EAT 2018]; root of context hierarchy
-INFO  - 2018-10-13 19:27:14 - Closing JPA EntityManagerFactory for persistence unit 'default'
-INFO  - 2018-10-13 19:27:14 - HikariPool-1 - Shutdown initiated...
-INFO  - 2018-10-13 19:27:14 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 10:48:22 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 10:48:22 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 10:48:22 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 10:48:22 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 10:48:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:48:22 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 10:48:22 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 10:48:23 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 10:48:23 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 10:48:23 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 10:48:23 - Started CellulantCardVerificationApplication in 2.047 seconds (JVM running for 2.366)
+ERROR - 2018-10-14 10:48:25 - +
+INFO  - 2018-10-14 10:48:25 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-14 10:48:26 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1700915: startup date [Sun Oct 14 10:48:21 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:48:26 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 10:48:26 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 10:48:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:48:26 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 10:48:26 - HikariPool-1 - Shutdown completed.
