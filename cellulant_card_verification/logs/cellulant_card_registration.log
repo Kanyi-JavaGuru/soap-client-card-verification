@@ -828,3 +828,168 @@ INFO  - 2018-10-14 10:48:26 - Unregistering JMX-exposed beans
 INFO  - 2018-10-14 10:48:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
 INFO  - 2018-10-14 10:48:26 - HikariPool-1 - Shutdown initiated...
 INFO  - 2018-10-14 10:48:26 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 10:54:45 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 7328 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 10:54:45 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 10:54:45 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@34b7ac2f: startup date [Sun Oct 14 10:54:45 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:54:46 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 10:54:46 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 10:54:46 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:54:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-14 10:54:46 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 10:54:46 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 10:54:46 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 10:54:46 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 10:54:47 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:54:47 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 10:54:47 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 10:54:47 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 10:54:47 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 10:54:47 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 10:54:47 - Started CellulantCardVerificationApplication in 2.107 seconds (JVM running for 2.479)
+INFO  - 2018-10-14 10:54:51 - Exception: org.springframework.ws.soap.client.SoapFaultClientException: Keine Bank zur BLZ 11030700 gefunden!
+INFO  - 2018-10-14 10:54:51 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-14 10:54:51 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@34b7ac2f: startup date [Sun Oct 14 10:54:45 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 10:54:51 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 10:54:51 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 10:54:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 10:54:51 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 10:54:51 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 11:12:03 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 7787 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 11:12:03 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 11:12:03 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5a63f509: startup date [Sun Oct 14 11:12:03 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:12:04 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 11:12:04 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 11:12:04 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:12:04 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-14 11:12:04 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 11:12:04 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 11:12:04 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 11:12:05 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 11:12:05 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:12:05 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 11:12:05 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 11:12:05 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 11:12:05 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 11:12:05 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 11:12:05 - Started CellulantCardVerificationApplication in 2.116 seconds (JVM running for 2.456)
+INFO  - 2018-10-14 11:12:09 - Exception: Keine Bank zur BLZ 11030700 gefunden!
+INFO  - 2018-10-14 11:12:09 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-14 11:12:09 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5a63f509: startup date [Sun Oct 14 11:12:03 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:12:09 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 11:12:09 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 11:12:09 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:12:09 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 11:12:09 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 11:27:52 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 8532 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 11:27:52 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 11:27:53 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6a28ffa4: startup date [Sun Oct 14 11:27:53 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:27:53 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 11:27:53 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 11:27:53 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:27:53 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-14 11:27:53 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 11:27:53 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 11:27:53 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 11:27:54 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 11:27:54 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:27:54 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 11:27:54 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 11:27:54 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 11:27:54 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 11:27:54 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 11:27:54 - Started CellulantCardVerificationApplication in 1.994 seconds (JVM running for 2.322)
+INFO  - 2018-10-14 11:28:04 - Exception: Keine Bank zur BLZ 11030700 gefunden!
+INFO  - 2018-10-14 11:28:04 - HHH000397: Using ASTQueryTranslatorFactory
+INFO  - 2018-10-14 11:28:04 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6a28ffa4: startup date [Sun Oct 14 11:27:53 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:28:04 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 11:28:04 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 11:28:04 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:28:04 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 11:28:04 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 11:29:14 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 8594 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 11:29:14 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 11:29:14 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6a28ffa4: startup date [Sun Oct 14 11:29:14 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:29:15 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 11:29:15 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 11:29:15 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:29:15 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-14 11:29:15 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 11:29:15 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 11:29:15 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 11:29:15 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 11:29:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:29:16 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 11:29:16 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 11:29:16 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 11:29:16 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 11:29:16 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 11:29:16 - Started CellulantCardVerificationApplication in 2.011 seconds (JVM running for 2.326)
+INFO  - 2018-10-14 11:29:19 - Exception: Keine Bank zur BLZ 11030700 gefunden!
+INFO  - 2018-10-14 11:29:19 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6a28ffa4: startup date [Sun Oct 14 11:29:14 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:29:19 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 11:29:19 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 11:29:19 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:29:19 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 11:29:19 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 11:42:19 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 8847 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 11:42:19 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 11:42:19 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1700915: startup date [Sun Oct 14 11:42:19 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:42:20 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 11:42:20 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 11:42:20 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:42:20 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-14 11:42:20 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 11:42:20 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 11:42:21 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 11:42:21 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 11:42:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:42:21 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 11:42:21 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 11:42:21 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 11:42:21 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 11:42:21 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 11:42:21 - Started CellulantCardVerificationApplication in 2.103 seconds (JVM running for 2.443)
+INFO  - 2018-10-14 11:42:36 - Exception: Keine Bank zur BLZ 11030700 gefunden!
+INFO  - 2018-10-14 11:42:36 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1700915: startup date [Sun Oct 14 11:42:19 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:42:36 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 11:42:36 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 11:42:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:42:36 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 11:42:36 - HikariPool-1 - Shutdown completed.
+INFO  - 2018-10-14 11:47:51 - Starting CellulantCardVerificationApplication on localhost.localdomain with PID 8993 (/home/kevin/git/cellulant_card_verification/cellulant_card_verification/target/classes started by kevin in /home/kevin/git/cellulant_card_verification/cellulant_card_verification)
+INFO  - 2018-10-14 11:47:51 - No active profile set, falling back to default profiles: default
+INFO  - 2018-10-14 11:47:51 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@72a7c7e0: startup date [Sun Oct 14 11:47:51 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:47:51 - HikariPool-1 - Starting...
+INFO  - 2018-10-14 11:47:52 - HikariPool-1 - Start completed.
+INFO  - 2018-10-14 11:47:52 - Building JPA container EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:47:52 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+INFO  - 2018-10-14 11:47:52 - HHH000412: Hibernate Core {5.2.17.Final}
+INFO  - 2018-10-14 11:47:52 - HHH000206: hibernate.properties not found
+INFO  - 2018-10-14 11:47:52 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  - 2018-10-14 11:47:52 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+INFO  - 2018-10-14 11:47:52 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:47:52 - Creating JAXBContext with context path [com.cellulant.wsdl]
+INFO  - 2018-10-14 11:47:52 - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+INFO  - 2018-10-14 11:47:52 - Registering beans for JMX exposure on startup
+INFO  - 2018-10-14 11:47:52 - Bean with name 'dataSource' has been autodetected for JMX exposure
+INFO  - 2018-10-14 11:47:52 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+INFO  - 2018-10-14 11:47:52 - Started CellulantCardVerificationApplication in 2.054 seconds (JVM running for 2.399)
+INFO  - 2018-10-14 11:48:11 - +
+INFO  - 2018-10-14 11:48:11 - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@72a7c7e0: startup date [Sun Oct 14 11:47:51 EAT 2018]; root of context hierarchy
+INFO  - 2018-10-14 11:48:11 - Unregistering JMX-exposed beans on shutdown
+INFO  - 2018-10-14 11:48:11 - Unregistering JMX-exposed beans
+INFO  - 2018-10-14 11:48:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  - 2018-10-14 11:48:11 - HikariPool-1 - Shutdown initiated...
+INFO  - 2018-10-14 11:48:11 - HikariPool-1 - Shutdown completed.

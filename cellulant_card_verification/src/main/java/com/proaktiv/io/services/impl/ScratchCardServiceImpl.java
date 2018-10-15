@@ -26,7 +26,12 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 	@Override
 	public boolean verifyScratchCard(final String number) {
 		if(number.length() == 23) {
-			final String[] sets = number.split("-");			
+			String[] sets = new String[4];
+			try {
+				sets = number.split("-");
+			} catch (Exception e) {
+				log.info("Exception: "+e.getMessage());
+			}			
 			return crossCheckCard(sets);
 		}
 		return false;
@@ -90,7 +95,7 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 		return builder.toString();
 	}
 	
-	public DetailsType retrieveBankDetails(String bic) {
+	public DetailsType retrieveBankDetails(final String bic) {
 		final GetBankResponseType response = gateway.getDetailsType(bic);
 		return response.getDetails();
 	}
@@ -99,8 +104,7 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 	public void verifyScratchCardsFromFile(final File file) {
 		String[] sets = new String[4];
 		DetailsType bankDetails = new DetailsType();
-		try {
-			final Scanner inputStream = new Scanner(file);
+		try (final Scanner inputStream = new Scanner(file)){			
 			inputStream.next();
 			
 			while (inputStream.hasNext()) {
@@ -112,7 +116,7 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 					bankDetails = retrieveBankDetails(bic);					
 				}					
 			}			
-			inputStream.close();
+			service.save(bankDetails, getCardValue(sets));		
 		} catch (FileNotFoundException e) {
 			log.info("FileNotFoundException: "+e.getMessage());
 		} catch (NullPointerException e) {
@@ -120,6 +124,5 @@ public class ScratchCardServiceImpl implements ScratchCardService {
 		} catch (Exception e) {
 			log.info("Exception: "+e.getMessage());
 		} 
-		service.save(bankDetails, getCardValue(sets));
 	}
 }
